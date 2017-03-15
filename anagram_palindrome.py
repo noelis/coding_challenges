@@ -27,7 +27,6 @@ def is_anagram_of_palindrome(word):
     >>> is_anagram_of_palindrome("aaa")
     True
     """
-
     word_cnt = Counter(word)
     single_letter = 0
 
@@ -40,6 +39,38 @@ def is_anagram_of_palindrome(word):
     else:
         return True
 
+def check_word_palindrome(word):
+
+    """Check if given word is a palindrome?
+
+    palindrome: a word that reads the same backwards/forwards.
+    ie: madam, racecar
+
+    >>> check_word_palindrome("a")
+    True
+
+    >>> check_word_palindrome("ab")
+    False
+
+    >>> check_word_palindrome("aab")
+    False
+
+    >>> check_word_palindrome("racecar")
+    True
+
+    >>> check_word_palindrome("tacocat")
+    True
+    """
+
+    word = word.lower()
+    listify = list(word)
+    new_word = ""
+
+    listify.reverse()
+
+    if  new_word.join(listify) == word:
+        return True
+    return False
 
 if __name__ == '__main__':
     import doctest
