@@ -19,7 +19,7 @@ def days_in_month(date):
 
     leap_year = find_leap_year(year)
 
-    if leap_year:
+    if month == 2 and leap_year:
         return 29
 
     if not leap_year:
@@ -37,7 +37,7 @@ def find_leap_year(year):
 
     >>> find_leap_year(2000)
     True
-    
+
     """
 
     if year % 400 == 0:
