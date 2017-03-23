@@ -17,11 +17,6 @@ def add_to_zero(nums):
     True
     """
 
-    if not nums:
-        return False
-    if len(nums) == 1:
-        return False
-
     set_nums = set(nums)
 
     for num in nums:
